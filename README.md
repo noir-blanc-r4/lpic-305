@@ -10,3 +10,13 @@
 | Dockerのコンテナごとの設定やイメージ、ログなどが配置されたディレクトリは？（フルパス） | /var/lib/docker/ |
 | Dockerのデーモンdockerdのオプションをカスタマイズするファイルは？（フルパス） | /etc/docker/daemon.json |
 | docker create、docker runコマンドにおいて、既に存在するコンテナのボリューム構成を再利用するオプションは？ | `--volumes-from` |
+
+## Docker 2
+
+| 問題 | 回答 |
+| ---- | ---- |
+| Dockerfileにおいて、作業ディレクトリを指定する命令は？ | `WORKDIR` |
+| Dockerfileにおいて、作成者やバージョン情報などのメタデータを指定する命令は？ | `LABEL` |
+| 以下のDockerfileで、コンテナ起動時に「Hello, Docker」と出力させたい。CMDコマンドによる命令を、シェル形式とexec形式で答えよ。 <br>![koma-mon Docker2 Q.09](./images/koma-mon-docker2-q09.png) | **シェル形式：** `CMD echo "Hello, Docker"` <br> **exec形式：** `CMD [ "echo", "Hello, Docker" ]` |
+| 以下のDockerfileで、コンテナ起動時に「Hello, Docker」と出力させたい。ENTRYPOINTコマンドによる命令を、シェル形式とexec形式で答えよ。 <br>![koma-mon Docker2 Q.11](./images/koma-mon-docker2-q11.png) | **シェル形式：** `ENTRYPOINT echo "Hello, Docker"` <br> **exec形式：** `ENTRYPOINT [ "echo", "Hello, Docker" ]` |
+| Dockerfileにおいて、作成するマウントポイントを指定する命令は？ | `VOLUME` |

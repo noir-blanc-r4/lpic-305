@@ -3,7 +3,7 @@
 ## Full Virtualization(主題351)
 
 - [仮想化の概念と理論](./Topic351/README.md#仮想化の概念と理論)
-
+- [仮想マシンのディスクイメージの管理](./Topic351/README.md#仮想マシンのディスクイメージの管理)
 
 ## コンテナ仮想化(主題352)
 
@@ -19,5 +19,3 @@
 - [Packer](./Topic353/README.md#packer)
 - [cloud-init](./Topic353/README.md#cloud-init)
 - [Vagrant](./Topic353/README.md#vagrant)
-
-

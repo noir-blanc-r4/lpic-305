@@ -1,5 +1,10 @@
 # [ping-t] コマ問プレミアムLPIC Lv3-305(Ver3.0)
 
+## Full Virtualization(主題351)
+
+- [仮想化の概念と理論](./Topic351/README.md#仮想化の概念と理論)
+
+
 ## コンテナ仮想化(主題352)
 
 - [コンテナ仮想化の概念](./Topic352/README.md#コンテナ仮想化の概念)

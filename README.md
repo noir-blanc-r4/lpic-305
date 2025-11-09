@@ -4,6 +4,7 @@
 
 - [仮想化の概念と理論](./Topic351/README.md#仮想化の概念と理論)
 - [Xen 1](./Topic351/README.md#xen-1)
+- [Xen 2](./Topic351/README.md#xen-2)
 - [仮想マシンのディスクイメージの管理](./Topic351/README.md#仮想マシンのディスクイメージの管理)
 
 ## コンテナ仮想化(主題352)

@@ -85,6 +85,31 @@
 [戻る](../README.md#full-virtualization主題351)
 
 
+## QEMU 1
+
+| 問題 | 回答 |
+| ---- | ---- |
+| QEMUが、ブロックデバイスやネットワークインタフェースなどの仮想化を実現したり、ホストOSのデバイスと通信する機能を持つデバイスドライバの標準をなんというか | VirtIO |
+| QEMUにおいて、仮想ブリッジ「br1」を作成して使用したい。下線に当てはまるコマンドを答えよ。<br> ```______ addbr br1``` <br> ```ip link add br1 type _______``` | `brctl` <br> `bridge` |
+| QEMUにおいて、TAPインタフェース「tap0」を作成して使用したい。下線に当てはまるコマンドを答えよ。 <br> ```______ -p -t tap0``` <br> ```ip ______ add dev tap0 mode tap``` | `tunctl` <br> `tuntap` |
+| KVMの仮想環境において、QEMUがKVMとやりとりをするデバイスファイル名は？（フルパス） | /dev/kvm |
+| Intel VT対応のCPUを使用している環境下でKVMを使用するためのカーネルモジュールのファイル名は？| kvm_intel.ko |
+| AMD-V対応のCPUを使用している環境下でKVMを使用するためのカーネルモジュールのファイル名は？ | kvm_amd.ko |
+| QEMUモニタで、稼働中の仮想マシンのスナップショットを作成するコマンドは？ | `savevm` |
+| QEMUモニタで、スナップショットから復元を行うコマンドは？ | `loadvm` |
+| QEMUモニタで、スナップショットを削除するコマンドは？ | `delvm` |
+| QEMUモニタで、仮想マシンに挿入されているCD-ROMを排出するコマンドは？ | `eject` |
+| QEMUモニタで、仮想マシンのCPU情報を確認するコマンドは？ | ```info cpus``` |
+| QEMUモニタで、稼働中の仮想マシンのネットワーク情報を確認するコマンドは？ | ```info network``` |
+| QEMUモニタで、稼働中の仮想マシンのブロックデバイス情報を確認するコマンドは？ | `info block` |
+| QEMUモニタで、仮想マシンのスナップショット一覧を表示するコマンドは？| ```info snapshots``` |
+| QEMUモニタで、KVMが有効か無効かを確認するコマンドは？ | ```info kvm``` |
+| QEMUモニタで、「 ```qemu-system-x86_64 -cdrom``` 」により取り付けられた仮想CD-ROMドライブから仮想メディアを強制的に取り出すコマンドは？ | ```eject -f ide1-cd0``` |
+| QEMUモニタで、仮想マシンのCD-ROMを「centos.iso」に入れ替えるコマンドは？ | ```change ide1-cd0 centos.iso``` |
+
+[戻る](../README.md#full-virtualization主題351)
+
+
 ## 仮想マシンのディスクイメージの管理
 
 | 問題 | 回答 |

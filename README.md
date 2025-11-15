@@ -6,6 +6,7 @@
 - [Xen 1](./Topic351/README.md#xen-1)
 - [Xen 2](./Topic351/README.md#xen-2)
 - [QEMU 1](./Topic351/README.md#qemu-1)
+- [QEMU 2](./Topic351/README.md#qemu-2)
 - [仮想マシンのディスクイメージの管理](./Topic351/README.md#仮想マシンのディスクイメージの管理)
 
 ## コンテナ仮想化(主題352)

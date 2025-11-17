@@ -8,6 +8,7 @@
 - [QEMU 1](./Topic351/README.md#qemu-1)
 - [QEMU 2](./Topic351/README.md#qemu-2)
 - [Libvirt Virtual Machine Management 1](./Topic351/README.md#libvirt-virtual-machine-management-1)
+- [Libvirt Virtual Machine Management 2](./Topic351/README.md#libvirt-virtual-machine-management-2)
 - [仮想マシンのディスクイメージの管理](./Topic351/README.md#仮想マシンのディスクイメージの管理)
 
 ## コンテナ仮想化(主題352)

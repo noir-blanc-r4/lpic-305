@@ -139,18 +139,18 @@
 
 ## Libvirt Virtual Machine Management 1
 
-| 問題 | 回答 |
-| ---- | ---- |
-| Xen、KVMなど、仮想化ソフトウェアに対応する統合管理基盤をなんというか | libvirt |
-| 仮想化の統合管理基盤であるlibvirtのデーモンは？ | libvirtd |
-| libvirtにおいて、仮想マシンのログ処理を担い、仮想マシンからのログ出力を受け取り、処理・保存等を行うデーモンは？ | virtlogd |
-| libvirtにおいて、仮想マシンリソースのロック管理を担当し、複数の仮想マシンが同じリソースに同時にアクセスすることを防ぐデーモンは？ | virtlockd |
-| libvirtにおいて、CUIで仮想マシンを作成し、ゲストOSをインストールするツールは？ | virt-install |
-| libvirtにおいて、GUIで仮想マシンを作成・管理するツールは？ | virt-manager |
-| libvirtにおいて、仮想マシンのクローンを作成するツールは？ | virt-clone |
-| libvirtにおいて、ゲストOSのグラフィカルコンソールを表示するツールは？ | virt-viewer |
-| libvirtにおいて、仮想マシンの定義ファイルやネットワークなどの設定ファイルが配置されているディレクトリは？  | /etc/libvirt/ |
-| libvirtにおける仮想マシンの設定ファイルの保存形式は？（略語で） | XML (形式) |
+| 問題 | 回答 | 復習１ |
+| ---- | ---- | :----: |
+| Xen、KVMなど、仮想化ソフトウェアに対応する統合管理基盤をなんというか | libvirt | ○ |
+| 仮想化の統合管理基盤であるlibvirtのデーモンは？ | libvirtd | ○ |
+| libvirtにおいて、仮想マシンのログ処理を担い、仮想マシンからのログ出力を受け取り、処理・保存等を行うデーモンは？ | virtlogd | <span style="color: red; ">×</span> |
+| libvirtにおいて、仮想マシンリソースのロック管理を担当し、複数の仮想マシンが同じリソースに同時にアクセスすることを防ぐデーモンは？ | virtlockd | <span style="color: red; ">×</span> |
+| libvirtにおいて、CUIで仮想マシンを作成し、ゲストOSをインストールするツールは？ | virt-install | ○ |
+| libvirtにおいて、GUIで仮想マシンを作成・管理するツールは？ | virt-manager | <span style="color: red; ">×</span> |
+| libvirtにおいて、仮想マシンのクローンを作成するツールは？ | virt-clone | ○ |
+| libvirtにおいて、ゲストOSのグラフィカルコンソールを表示するツールは？ | virt-viewer | ○ |
+| libvirtにおいて、仮想マシンの定義ファイルやネットワークなどの設定ファイルが配置されているディレクトリは？  | /etc/libvirt/ | ○ |
+| libvirtにおける仮想マシンの設定ファイルの保存形式は？（略語で） | XML (形式) | <span style="color: red; ">×</span> |
 
 [戻る](../README.md#full-virtualization主題351)
 

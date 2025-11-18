@@ -190,31 +190,31 @@
 ## Libvirt Virtual Machine Management 3
 
 
-| 問題 | 回答 |
-| ---- | ---- |
-| 以下はvirsh dumpxmlの出力である。ドメイン `Fedora` のハイパーバイザーを答えよ。 <br> ![koma-mon Libvirt3 Q.01](../images/koma-mon-libvirt3-q01.png)  | KVM |
-| 以下はvirsh dumpxmlの出力である。 `os` エレメントにおいて、仮想マシンのブート時に使用するファームウェアをBIOSにしたいとき、設定する項目名はどれか。項目名のみ答えよ  <br> ![koma-mon Libvirt3 Q.06](../images/koma-mon-libvirt3-q06.png)  | `firmware` |
-| 以下はvirsh dumpxmlの出力である。virsh editコマンドを用いて、仮想マシンのビデオカードに「 `vga` 」を指定したい。以下の設定のうち書き換える必要がある箇所を、正しく変更して答えよ。 <br> ![koma-mon Libvirt3 Q.23](../images/koma-mon-libvirt3-q23.png) | `model type='vga'` |
-| 以下はvirsh editコマンドの出力である。仮想マシンの割当てメモリ量を変更したいときの項目名を答えよ <br> ![koma-mon Libvirt3 Q.08](../images/koma-mon-libvirt3-q08.png) | `memory unit` |
-| virsh editコマンドを用いて、仮想マシンのネットワークデバイスを「 `e1000` 」ドライバを用いるように変更したい。以下の設定のうち書き換える必要がある箇所を、正しく変更して答えよ。<br> ![koma-mon Libvirt3 Q.10](../images/koma-mon-libvirt3-q10.png) | `model type='e1000'` |
-| virshコマンドにおいて、仮想ネットワークを起動するサブコマンドは？ | `net-start` |
-| virshコマンドにおいて、仮想ネットワークの強制停止を行うサブコマンドは？ | `net-destroy` |
-| virshコマンドにおいて、仮想ネットワークをリスト表示するサブコマンドは？ | `net-list` |
-| virshコマンドにおいて、XML形式の設定ファイルを開いて仮想ネットワークの設定変更を行うサブコマンドは？ | `net-edit` |
-| virshコマンドにおいて、仮想ネットワークの自動起動を設定するサブコマンドは？ | `net-autostart` |
-| virshコマンドにおいて、ネットワークフィルタリングのルールを定義するサブコマンドと定義を削除するサブコマンドをそれぞれ答えよ | `nwfilter-define` <br> `nwfilter-undefine` |
-| virshコマンドにおいて、以下の出力を得るサブコマンドは？ <br> ![koma-mon Libvirt3 Q.07](../images/koma-mon-libvirt3-q07.png) | `nwfilter-list` |
-| virshコマンドを用いてネットワークフィルタリングのルール「 `sample-filter` 」の内容をXML形式で表示したいとき、下線部にあてはまるサブコマンドを答えよ <br> ```virsh ____________ sample-filter``` | `nwfilter-dumpxml` |
-| virshコマンドを用いてネットワークフィルタリングのルール「 `sample-filter` 」をXML形式で編集するとき、下線部にあてはまるサブコマンドを答えよ <br> ```virsh ____________ sample-filter``` | `nwfilter-edit` |
-| virshコマンドで、ストレージプール「 `default` 」のボリュームの詳細なリストを表示したい。下線部に当てはまるものを答えよ。 <br> ```virsh _______ default _________``` | `vol-list` <br> `--details` |
-| virshコマンドにおいて、一時的なストレージプールを作成するサブコマンドは？ | `pool-create-as` |
-| virshコマンドにおいて、永続的なストレージプールを作成するサブコマンドは？ | `pool-define-as` |
-| virshコマンドにおいて、ストレージプールの一覧を表示するサブコマンドは？ | `pool-list` |
-| 「 ```virsh vol-list test-storage``` 」コマンドを実行すると、以下のエラーが表示された。エラーを解消するために、「 `/test` 」ディレクトリにストレージプールを作成したい。ストレージタイプをディレクトリとするとき、下線部に当てはまるものを答えよ <br> ```virsh pool-create-as test-storage ______ --target ______``` <br> ![koma-mon Libvirt3 Q.12](../images/koma-mon-libvirt3-q12.png) | `dir` <br> `/test` |
-| virshコマンドにおいて、スナップショットを作成するサブコマンドは？ | `snapshot-create-as` |
-| virshコマンドにおいて、スナップショットの一覧を表示するサブコマンドは？ | `snapshot-list` |
-| virshコマンドを用いて仮想マシン「 `fedora` 」のスナップショット「 `snap01` 」を削除するとき、下線部に当てはまるサブコマンドは？ <br> ```virsh _________ fedora snap01``` | `snapshot-delete` |
-| virshコマンドを用いて仮想マシン「 `fedora` 」を、スナップショット「 `snap01` 」の状態に復元するとき、下線部に当てはまるサブコマンドは？ <br> ```virsh _________ fedora snap01``` | `snapshot-revert` |
+| 問題 | 回答 | 復習１ |
+| ---- | ---- | :----: |
+| 以下はvirsh dumpxmlの出力である。ドメイン `Fedora` のハイパーバイザーを答えよ。 <br> ![koma-mon Libvirt3 Q.01](../images/koma-mon-libvirt3-q01.png)  | KVM | ○ |
+| 以下はvirsh dumpxmlの出力である。 `os` エレメントにおいて、仮想マシンのブート時に使用するファームウェアをBIOSにしたいとき、設定する項目名はどれか。項目名のみ答えよ  <br> ![koma-mon Libvirt3 Q.06](../images/koma-mon-libvirt3-q06.png)  | `firmware` | ○ |
+| 以下はvirsh dumpxmlの出力である。virsh editコマンドを用いて、仮想マシンのビデオカードに「 `vga` 」を指定したい。以下の設定のうち書き換える必要がある箇所を、正しく変更して答えよ。 <br> ![koma-mon Libvirt3 Q.23](../images/koma-mon-libvirt3-q23.png) | `model type='vga'` | ○ |
+| 以下はvirsh editコマンドの出力である。仮想マシンの割当てメモリ量を変更したいときの項目名を答えよ <br> ![koma-mon Libvirt3 Q.08](../images/koma-mon-libvirt3-q08.png) | `memory unit` | ○ |
+| virsh editコマンドを用いて、仮想マシンのネットワークデバイスを「 `e1000` 」ドライバを用いるように変更したい。以下の設定のうち書き換える必要がある箇所を、正しく変更して答えよ。<br> ![koma-mon Libvirt3 Q.10](../images/koma-mon-libvirt3-q10.png) | `model type='e1000'` | ○ |
+| virshコマンドにおいて、仮想ネットワークを起動するサブコマンドは？ | `net-start` | ○ |
+| virshコマンドにおいて、仮想ネットワークの強制停止を行うサブコマンドは？ | `net-destroy` | ○ |
+| virshコマンドにおいて、仮想ネットワークをリスト表示するサブコマンドは？ | `net-list` | ○ |
+| virshコマンドにおいて、XML形式の設定ファイルを開いて仮想ネットワークの設定変更を行うサブコマンドは？ | `net-edit` | ○ |
+| virshコマンドにおいて、仮想ネットワークの自動起動を設定するサブコマンドは？ | `net-autostart` | ○ |
+| virshコマンドにおいて、ネットワークフィルタリングのルールを定義するサブコマンドと定義を削除するサブコマンドをそれぞれ答えよ | `nwfilter-define` <br> `nwfilter-undefine` | ○ <br> ○ |
+| virshコマンドにおいて、以下の出力を得るサブコマンドは？ <br> ![koma-mon Libvirt3 Q.07](../images/koma-mon-libvirt3-q07.png) | `nwfilter-list` | ○ |
+| virshコマンドを用いてネットワークフィルタリングのルール「 `sample-filter` 」の内容をXML形式で表示したいとき、下線部にあてはまるサブコマンドを答えよ <br> ```virsh ____________ sample-filter``` | `nwfilter-dumpxml` | ○ |
+| virshコマンドを用いてネットワークフィルタリングのルール「 `sample-filter` 」をXML形式で編集するとき、下線部にあてはまるサブコマンドを答えよ <br> ```virsh ____________ sample-filter``` | `nwfilter-edit` | ○ |
+| virshコマンドで、ストレージプール「 `default` 」のボリュームの詳細なリストを表示したい。下線部に当てはまるものを答えよ。 <br> ```virsh _______ default _________``` | `vol-list` <br> `--details` | ○ <br> ○ |
+| virshコマンドにおいて、一時的なストレージプールを作成するサブコマンドは？ | `pool-create-as` | <span style="color: red; ">×</span> |
+| virshコマンドにおいて、永続的なストレージプールを作成するサブコマンドは？ | `pool-define-as` | <span style="color: red; ">×</span> |
+| virshコマンドにおいて、ストレージプールの一覧を表示するサブコマンドは？ | `pool-list` | ○ |
+| 「 ```virsh vol-list test-storage``` 」コマンドを実行すると、以下のエラーが表示された。エラーを解消するために、「 `/test` 」ディレクトリにストレージプールを作成したい。ストレージタイプをディレクトリとするとき、下線部に当てはまるものを答えよ <br> ```virsh pool-create-as test-storage ______ --target ______``` <br> ![koma-mon Libvirt3 Q.12](../images/koma-mon-libvirt3-q12.png) | `dir` <br> `/test` | ○ |
+| virshコマンドにおいて、スナップショットを作成するサブコマンドは？ | `snapshot-create-as` | ○ |
+| virshコマンドにおいて、スナップショットの一覧を表示するサブコマンドは？ | `snapshot-list` | ○ |
+| virshコマンドを用いて仮想マシン「 `fedora` 」のスナップショット「 `snap01` 」を削除するとき、下線部に当てはまるサブコマンドは？ <br> ```virsh _________ fedora snap01``` | `snapshot-delete` | ○ |
+| virshコマンドを用いて仮想マシン「 `fedora` 」を、スナップショット「 `snap01` 」の状態に復元するとき、下線部に当てはまるサブコマンドは？ <br> ```virsh _________ fedora snap01``` | `snapshot-revert` | ○ |
 
 [戻る](../README.md#full-virtualization主題351)
 

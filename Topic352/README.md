@@ -63,12 +63,12 @@
 
 ## Docker 1
 
-| 問題 | 回答 |
-| ---- | ---- |
-| dockerコマンドにおいて、起動中のコンテナへログインするサブコマンドは？ | `attach` |
-| docker create、docker runコマンドにおいて、既に存在するコンテナのボリューム構成を再利用するオプションは？ | `--volumes-from` |
-| Dockerのコンテナごとの設定やイメージ、ログなどが配置されたディレクトリは？（フルパス） | /var/lib/docker/ |
-| Dockerのデーモンdockerdのオプションをカスタマイズするファイルは？（フルパス） | /etc/docker/daemon.json |
+| 問題 | 回答 | 復習１ |
+| ---- | ---- | :----: |
+| dockerコマンドにおいて、起動中のコンテナへログインするサブコマンドは？ | `attach` | ○ |
+| docker create、docker runコマンドにおいて、既に存在するコンテナのボリューム構成を再利用するオプションは？ | `--volumes-from` | <span style="color: red; ">×</span> |
+| Dockerのコンテナごとの設定やイメージ、ログなどが配置されたディレクトリは？（フルパス） | /var/lib/docker/ | ○ |
+| Dockerのデーモンdockerdのオプションをカスタマイズするファイルは？（フルパス） | /etc/docker/daemon.json | ○ |
 
 [戻る](../README.md#コンテナ仮想化主題352)
 

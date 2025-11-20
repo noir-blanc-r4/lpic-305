@@ -67,23 +67,23 @@
 
 ## Vagrant
 
-| 問題 | 回答 |
-| ---- | ---- |
-| 設定ファイルに仮想マシンの構成情報を記述することで仮想マシンのプロビジョニングを自動化する仮想環境の作成・管理を支援するツールは？| Vagrant |
-| Vagrantのデフォルトのプロバイダは？ | VirtualBox |
-| Vagrantにおいて、仮想マシンのプロビジョニングを行う基となるパッケージをなんというか | box |
-| vagrantコマンドにおいて、Vagrantの設定ファイル「Vagrantfile」を作成するサブコマンドは？ | `init` |
-| vagrantコマンドにおいて、Vagrantfileに基づいて仮想マシンを作成するサブコマンドは？  | `up` |
-| vagrantコマンドにおいて、仮想マシンをシャットダウンするサブコマンドは？ | `halt` |
-| vagrantコマンドにおいて、仮想マシンを停止し、関連リソースを削除するサブコマンドは？ | `destroy` |
-| vagrantコマンドにおいて、稼働中の仮想マシンの状態を保存して、一時停止するサブコマンドは？ | `suspend` |
-| vagrantコマンドにおいて、サスペンド（一時停止）中の仮想マシンの状態を復元して再開するサブコマンドは？ | `resume` |
-| vagrantコマンドにおいて、稼働中の仮想マシンにSSH接続するサブコマンドは？ | `ssh` |
-| vagrantコマンドにおいて、仮想マシンの状態を表示するサブコマンドは？ | `status` |
-| vagrantコマンドにおいて、仮想マシンを作成するためのイメージ（box）を管理するサブコマンドは？ | `box` |
-| vagrantコマンドにおいて、仮想マシンを再利用可能なboxとしてパッケージ化するサブコマンドは？ | `package` |
-| Vagrant Cloud（旧Atlas）で提供されているbox「centos/8」を取得するコマンドラインを答えよ | ```vagrant box add centos/8``` |
-| 次のVagrantfileに定義されている仮想マシン名は？（アルファベット順に回答）<br> ![koma-mon Vagrant Q.03](../images/koma-mon-vagrant-q03.png) | centos <br> ubuntu |
-| 次のVagrantfileを参照し、それぞれについてVagrantfile内の記述を用いて答えよ <br>・仮想マシンのホスト名 <br>・仮想マシンと共有しているホストのディレクトリ名 <br> ![koma-mon Vagrant Q.09](../images/koma-mon-vagrant-q09.png) | vm1 <br> ./share |
+| 問題 | 回答 | 復習１ |
+| ---- | ---- | :----: |
+| 設定ファイルに仮想マシンの構成情報を記述することで仮想マシンのプロビジョニングを自動化する仮想環境の作成・管理を支援するツールは？| Vagrant | ○ |
+| Vagrantのデフォルトのプロバイダは？ | VirtualBox | <span style="color: red; ">×</span> |
+| Vagrantにおいて、仮想マシンのプロビジョニングを行う基となるパッケージをなんというか | box | ○ |
+| vagrantコマンドにおいて、Vagrantの設定ファイル「Vagrantfile」を作成するサブコマンドは？ | `init` | ○ |
+| vagrantコマンドにおいて、Vagrantfileに基づいて仮想マシンを作成するサブコマンドは？  | `up` | <span style="color: red; ">×</span> |
+| vagrantコマンドにおいて、仮想マシンをシャットダウンするサブコマンドは？ | `halt` | ○ |
+| vagrantコマンドにおいて、仮想マシンを停止し、関連リソースを削除するサブコマンドは？ | `destroy` | <span style="color: red; ">×</span> |
+| vagrantコマンドにおいて、稼働中の仮想マシンの状態を保存して、一時停止するサブコマンドは？ | `suspend` | ○ |
+| vagrantコマンドにおいて、サスペンド（一時停止）中の仮想マシンの状態を復元して再開するサブコマンドは？ | `resume` | ○ |
+| vagrantコマンドにおいて、稼働中の仮想マシンにSSH接続するサブコマンドは？ | `ssh` | ○ |
+| vagrantコマンドにおいて、仮想マシンの状態を表示するサブコマンドは？ | `status` | ○ |
+| vagrantコマンドにおいて、仮想マシンを作成するためのイメージ（box）を管理するサブコマンドは？ | `box` | ○ |
+| vagrantコマンドにおいて、仮想マシンを再利用可能なboxとしてパッケージ化するサブコマンドは？ | `package` | ○ |
+| Vagrant Cloud（旧Atlas）で提供されているbox「centos/8」を取得するコマンドラインを答えよ | ```vagrant box add centos/8``` | <span style="color: red; ">×</span> |
+| 次のVagrantfileに定義されている仮想マシン名は？（アルファベット順に回答）<br> ![koma-mon Vagrant Q.03](../images/koma-mon-vagrant-q03.png) | centos <br> ubuntu | ○ <br> ○ |
+| 次のVagrantfileを参照し、それぞれについてVagrantfile内の記述を用いて答えよ <br>・仮想マシンのホスト名 <br>・仮想マシンと共有しているホストのディレクトリ名 <br> ![koma-mon Vagrant Q.09](../images/koma-mon-vagrant-q09.png) | vm1 <br> ./share | ○ <br> <span style="color: red; ">×</span> |
 
 [戻る](../README.md#vmのデプロイとプロビジョニング主題353)

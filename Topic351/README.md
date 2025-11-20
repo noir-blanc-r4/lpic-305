@@ -87,25 +87,25 @@
 
 ## QEMU 1
 
-| 問題 | 回答 | 復習１ |
-| ---- | ---- | :----: |
-| QEMUが、ブロックデバイスやネットワークインタフェースなどの仮想化を実現したり、ホストOSのデバイスと通信する機能を持つデバイスドライバの標準をなんというか | VirtIO | ○ |
-| QEMUにおいて、仮想ブリッジ「br1」を作成して使用したい。下線に当てはまるコマンドを答えよ。<br> ```______ addbr br1``` <br> ```ip link add br1 type _______``` | `brctl` <br> `bridge` | ○ <br> ○ |
-| QEMUにおいて、TAPインタフェース「tap0」を作成して使用したい。下線に当てはまるコマンドを答えよ。 <br> ```______ -p -t tap0``` <br> ```ip ______ add dev tap0 mode tap``` | `tunctl` <br> `tuntap` |  <span style="color: red; ">×</span> <br> ○ |
-| KVMの仮想環境において、QEMUがKVMとやりとりをするデバイスファイル名は？（フルパス） | /dev/kvm | ○ |
-| Intel VT対応のCPUを使用している環境下でKVMを使用するためのカーネルモジュールのファイル名は？| kvm_intel.ko | ○ |
-| AMD-V対応のCPUを使用している環境下でKVMを使用するためのカーネルモジュールのファイル名は？ | kvm_amd.ko | ○ |
-| QEMUモニタで、稼働中の仮想マシンのスナップショットを作成するコマンドは？ | `savevm` | <span style="color: red; ">×</span> |
-| QEMUモニタで、スナップショットから復元を行うコマンドは？ | `loadvm` | <span style="color: red; ">×</span> |
-| QEMUモニタで、スナップショットを削除するコマンドは？ | `delvm` | ○ |
-| QEMUモニタで、仮想マシンに挿入されているCD-ROMを排出するコマンドは？ | `eject` | <span style="color: red; ">×</span> |
-| QEMUモニタで、仮想マシンのCPU情報を確認するコマンドは？ | ```info cpus``` | <span style="color: red; ">×</span> |
-| QEMUモニタで、稼働中の仮想マシンのネットワーク情報を確認するコマンドは？ | ```info network``` | <span style="color: red; ">×</span> |
-| QEMUモニタで、稼働中の仮想マシンのブロックデバイス情報を確認するコマンドは？ | `info block` | <span style="color: red; ">×</span> |
-| QEMUモニタで、仮想マシンのスナップショット一覧を表示するコマンドは？| ```info snapshots``` | <span style="color: red; ">×</span> |
-| QEMUモニタで、KVMが有効か無効かを確認するコマンドは？ | ```info kvm``` | <span style="color: red; ">×</span> |
-| QEMUモニタで、「 ```qemu-system-x86_64 -cdrom``` 」により取り付けられた仮想CD-ROMドライブから仮想メディアを強制的に取り出すコマンドは？ | ```eject -f ide1-cd0``` | <span style="color: red; ">×</span> |
-| QEMUモニタで、仮想マシンのCD-ROMを「centos.iso」に入れ替えるコマンドは？ | ```change ide1-cd0 centos.iso``` | <span style="color: red; ">×</span> |
+| 問題 | 回答 | 復習１ | 復習２ |
+| ---- | ---- | :----: | :----: |
+| QEMUが、ブロックデバイスやネットワークインタフェースなどの仮想化を実現したり、ホストOSのデバイスと通信する機能を持つデバイスドライバの標準をなんというか | VirtIO | ○ | <span style="color: red; ">×</span> |
+| QEMUにおいて、仮想ブリッジ「br1」を作成して使用したい。下線に当てはまるコマンドを答えよ。<br> ```______ addbr br1``` <br> ```ip link add br1 type _______``` | `brctl` <br> `bridge` | ○ <br> ○ | ○ <br> ○ |
+| QEMUにおいて、TAPインタフェース「tap0」を作成して使用したい。下線に当てはまるコマンドを答えよ。 <br> ```______ -p -t tap0``` <br> ```ip ______ add dev tap0 mode tap``` | `tunctl` <br> `tuntap` |  <span style="color: red; ">×</span> <br> ○ | ○ <br> ○ |
+| KVMの仮想環境において、QEMUがKVMとやりとりをするデバイスファイル名は？（フルパス） | /dev/kvm | ○ | ○ |
+| Intel VT対応のCPUを使用している環境下でKVMを使用するためのカーネルモジュールのファイル名は？| kvm_intel.ko | ○ | ○ |
+| AMD-V対応のCPUを使用している環境下でKVMを使用するためのカーネルモジュールのファイル名は？ | kvm_amd.ko | ○ | ○ |
+| QEMUモニタで、稼働中の仮想マシンのスナップショットを作成するコマンドは？ | `savevm` | <span style="color: red; ">×</span> | <span style="color: red; ">×</span> |
+| QEMUモニタで、スナップショットから復元を行うコマンドは？ | `loadvm` | <span style="color: red; ">×</span> | <span style="color: red; ">×</span> |
+| QEMUモニタで、スナップショットを削除するコマンドは？ | `delvm` | ○ | <span style="color: red; ">×</span> |
+| QEMUモニタで、仮想マシンのスナップショット一覧を表示するコマンドは？| ```info snapshots``` | <span style="color: red; ">×</span> | <span style="color: red; ">×</span> |
+| QEMUモニタで、仮想マシンのCPU情報を確認するコマンドは？ | ```info cpus``` | <span style="color: red; ">×</span> | <span style="color: red; ">×</span> |
+| QEMUモニタで、稼働中の仮想マシンのネットワーク情報を確認するコマンドは？ | ```info network``` | <span style="color: red; ">×</span> | <span style="color: red; ">×</span> |
+| QEMUモニタで、稼働中の仮想マシンのブロックデバイス情報を確認するコマンドは？ | `info block` | <span style="color: red; ">×</span> | <span style="color: red; ">×</span> |
+| QEMUモニタで、KVMが有効か無効かを確認するコマンドは？ | ```info kvm``` | <span style="color: red; ">×</span> | ○ |
+| QEMUモニタで、仮想マシンに挿入されているCD-ROMを排出するコマンドは？ | `eject` | <span style="color: red; ">×</span> | ○ |
+| QEMUモニタで、「 ```qemu-system-x86_64 -cdrom``` 」により取り付けられた仮想CD-ROMドライブから仮想メディアを強制的に取り出すコマンドは？ | ```eject -f ide1-cd0``` | <span style="color: red; ">×</span> | <span style="color: red; ">×</span> |
+| QEMUモニタで、仮想マシンのCD-ROMを「centos.iso」に入れ替えるコマンドは？ | ```change ide1-cd0 centos.iso``` | <span style="color: red; ">×</span> | <span style="color: red; ">×</span> |
 
 [戻る](../README.md#full-virtualization主題351)
 

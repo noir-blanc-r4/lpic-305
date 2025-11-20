@@ -27,31 +27,31 @@
 
 ## Xen 1
 
-| 問題 | 回答 | 復習１ |
-| ---- | ---- | :----: |
-| Xenの高機能管理ツールであるAPIをなんというか | XAPI | ○ |
-| Xenにおいて稼働中の仮想マシンの構成情報データベースをなんというか | XenStore | ○ |
-| Xenの管理用ドメインをなんというか | Domain-0 | <span style="color: red; ">×</span> |
-| XenのゲストOSをインストールするドメインをなんというか | Domain-U | ○ |
-| Domain-0側から見た際のDomain-Uの仮想ネットワークインターフェイス名をなんというか | vif | ○ |
-| Xenにおいて、ドメイン（ゲスト）定義ファイルなどの主要なファイルやディレクトリが置かれるディレクトリは？ | /etc/xen/ | ○ |
-| システム起動時に自動的にXenのゲストOSも起動させる場合、Xenのドメイン（ゲスト）定義ファイルのシンボリックリンクの配置先のディレクトリは？（フルパス）| /etc/xen/auto/ | ○ |
-| Xenにおいてxlツールスタックの全体的な設定を行うファイルを答えよ（フルパス） | /etc/xen/xl.conf | ○ |
-| Xenのドメイン定義ファイル「/etc/xen/xl.cfg（ドメイン名.cfg）」で、仮想CPUの数を指定する設定項目は？ | `vcpus` | ○ |
-| Xenのドメイン定義ファイル「/etc/xen/xl.cfg（ドメイン名.cfg）」で、メモリサイズを指定する設定項目は？ | `memory` | <span style="color: red; ">×</span> |
-| Xenのドメイン定義ファイル「/etc/xen/xl.cfg（ドメイン名.cfg）」で、ドメインの仮想ネットワークインタフェースのMACアドレスとIPアドレスを指定する設定項目は？ | `vif` | ○ |
-| Xenのドメイン定義ファイル「/etc/xen/xl.cfg（ドメイン名.cfg）」で、仮想マシンに割り当てるディスクデバイスを指定する設定項目は？ | `disk` | <span style="color: red; ">×</span> |
-| Xenのドメイン定義ファイル「/etc/xen/xl.cfg（ドメイン名.cfg）」で、RAMディスクファイルを絶対パスで指定する設定項目は？ | `ramdisk` | ○ |
-| Xenのドメイン定義ファイル「/etc/xen/xl.cfg（ドメイン名.cfg）」で、カーネルイメージファイルを絶対パスで指定する設定項目は？ | `kernel` | ○ |
-| Xenのドメイン定義ファイル「/etc/xen/xl.cfg（ドメイン名.cfg）」で、ルートデバイスを指定する設定項目は？ | `root` | ○ |
-| Xenのドメイン定義ファイル「/etc/xen/xl.cfg（ドメイン名.cfg）」で、仮想マシン名を指定する設定項目は？ | `name` | ○ |
-| Xenのドメイン定義ファイル「/etc/xen/xl.cfg（ドメイン名.cfg）」で、ドメインをハードディスクから起動するよう指定する設定項目および値は？ 設定項目、設定値の順に答えよ | **設定項目:** `boot` <br> **設定値:** `c` | ○ <br> ○ |
-| Xenのドメイン定義ファイル「/etc/xen/xl.cfg（ドメイン名.cfg）」で、準仮想化マシンを作成するための設定項目および値は？設定項目、設定値の順に答えよ | **設定項目:** `builder` <br> **設定値:** `generic` |  <span style="color: red; ">×</span>  <br> ○ |
-| Xenのドメイン定義ファイル「/etc/xen/xl.cfg（ドメイン名.cfg）」で、マシンを作成するための設定項目および値は？設定項目、設定値の順に答えよ | **設定項目:** `builder` <br> **設定値:** `hvm` |  <span style="color: red; ">×</span> <br> ○ |
-| Domain-0の起動オプションを記述するファイル名を答えよ（ファイル名のみ） | grub.cfg | ○ |
-| 「grub.cfg」において、Domain-0のメモリ制限を設定する項目は？ | `dom0_mem` | <span style="color: red; ">×</span> |
-| Xenドメインの構成情報を階層的な名前空間で表示するコマンドは？ | `xenstore-ls` | <span style="color: red; ">×</span> |
-| Xenのコマンドで、各仮想マシンの稼働状況をリアルタイムに更新しながら表示するものは？（xlサブコマンド以外のコマンドを回答） | `xentop` | ○ |
+| 問題 | 回答 | 復習１ | 復習２ |
+| ---- | ---- | :----: | :----: |
+| Xenの高機能管理ツールであるAPIをなんというか | XAPI | ○ | ○ |
+| Xenにおいて稼働中の仮想マシンの構成情報データベースをなんというか | XenStore | ○ | ○ |
+| Xenの管理用ドメインをなんというか | Domain-0 | <span style="color: red; ">×</span> | ○ |
+| XenのゲストOSをインストールするドメインをなんというか | Domain-U | ○ | ○ |
+| Domain-0側から見た際のDomain-Uの仮想ネットワークインターフェイス名をなんというか | vif | ○ | ○ |
+| Xenにおいて、ドメイン（ゲスト）定義ファイルなどの主要なファイルやディレクトリが置かれるディレクトリは？ | /etc/xen/ | ○ | ○ |
+| システム起動時に自動的にXenのゲストOSも起動させる場合、Xenのドメイン（ゲスト）定義ファイルのシンボリックリンクの配置先のディレクトリは？（フルパス）| /etc/xen/auto/ | ○ | ○ |
+| Xenにおいてxlツールスタックの全体的な設定を行うファイルを答えよ（フルパス） | /etc/xen/xl.conf | ○ | ○ |
+| Xenのドメイン定義ファイル「/etc/xen/xl.cfg（ドメイン名.cfg）」で、仮想CPUの数を指定する設定項目は？ | `vcpus` | ○ | ○ |
+| Xenのドメイン定義ファイル「/etc/xen/xl.cfg（ドメイン名.cfg）」で、メモリサイズを指定する設定項目は？ | `memory` | <span style="color: red; ">×</span> | ○ |
+| Xenのドメイン定義ファイル「/etc/xen/xl.cfg（ドメイン名.cfg）」で、ドメインの仮想ネットワークインタフェースのMACアドレスとIPアドレスを指定する設定項目は？ | `vif` | ○ | ○ |
+| Xenのドメイン定義ファイル「/etc/xen/xl.cfg（ドメイン名.cfg）」で、仮想マシンに割り当てるディスクデバイスを指定する設定項目は？ | `disk` | <span style="color: red; ">×</span> | ○ |
+| Xenのドメイン定義ファイル「/etc/xen/xl.cfg（ドメイン名.cfg）」で、RAMディスクファイルを絶対パスで指定する設定項目は？ | `ramdisk` | ○ | ○ |
+| Xenのドメイン定義ファイル「/etc/xen/xl.cfg（ドメイン名.cfg）」で、カーネルイメージファイルを絶対パスで指定する設定項目は？ | `kernel` | ○ | ○ |
+| Xenのドメイン定義ファイル「/etc/xen/xl.cfg（ドメイン名.cfg）」で、ルートデバイスを指定する設定項目は？ | `root` | ○ | ○ |
+| Xenのドメイン定義ファイル「/etc/xen/xl.cfg（ドメイン名.cfg）」で、仮想マシン名を指定する設定項目は？ | `name` | ○ | ○ |
+| Xenのドメイン定義ファイル「/etc/xen/xl.cfg（ドメイン名.cfg）」で、ドメインをハードディスクから起動するよう指定する設定項目および値は？ 設定項目、設定値の順に答えよ | **設定項目:** `boot` <br> **設定値:** `c` | ○ <br> ○ | ○ <br> ○ |
+| Xenのドメイン定義ファイル「/etc/xen/xl.cfg（ドメイン名.cfg）」で、準仮想化マシンを作成するための設定項目および値は？設定項目、設定値の順に答えよ | **設定項目:** `builder` <br> **設定値:** `generic` |  <span style="color: red; ">×</span>  <br> ○ | <span style="color: red; ">×</span> <br> ○ |
+| Xenのドメイン定義ファイル「/etc/xen/xl.cfg（ドメイン名.cfg）」で、マシンを作成するための設定項目および値は？設定項目、設定値の順に答えよ | **設定項目:** `builder` <br> **設定値:** `hvm` |  <span style="color: red; ">×</span> <br> ○ | <span style="color: red; ">×</span> <br> ○ |
+| Domain-0の起動オプションを記述するファイル名を答えよ（ファイル名のみ） | grub.cfg | ○ | <span style="color: red; ">×</span> |
+| 「grub.cfg」において、Domain-0のメモリ制限を設定する項目は？ | `dom0_mem` | <span style="color: red; ">×</span> | ○ |
+| Xenドメインの構成情報を階層的な名前空間で表示するコマンドは？ | `xenstore-ls` | <span style="color: red; ">×</span> | ○ |
+| Xenのコマンドで、各仮想マシンの稼働状況をリアルタイムに更新しながら表示するものは？（xlサブコマンド以外のコマンドを回答） | `xentop` | ○ | ○ |
 
 
 [戻る](../README.md#full-virtualization主題351)

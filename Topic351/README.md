@@ -112,27 +112,27 @@
 
 ## QEMU 2
 
-| 問題 | 回答 | 復習１ |
-| ---- | ---- | :----: |
-| QEMUでゲストOSのインストールや起動・設定など各種操作を行うコマンドユーティリティは？なお、アーキテクチャはx86_64向けのものとする | `qemu-system-x86_64` | ○ |
-| qemu（qemu-system-x86_64）コマンドで、仮想マシンに対して指定した数のCPUを持つSMPシステムとしてエミュレートするオプションは？ | `-smp` | ○ |
-| qemu（qemu-system-x86_64）コマンドで、仮想マシンのメモリサイズを指定するオプションは？ | `-m` | <span style="color: red; ">×</span> |
-| qemu（qemu-system-x86_64）コマンドで、ユーザーモードネットワークを使用するよう指定するオプションは？ | `-net user` | ○ |
-| qemu（qemu-system-x86_64）コマンドで、VLANに接続するNICを作成するオプションは？ | `-net nic` | <span style="color: red; ">×</span> |
-| qemu（qemu-system-x86_64）コマンドで、TUN/TAPデバイスを使用してゲストOSとホストOSを仮想ネットワークで接続するオプションは？ | `-net tap` | <span style="color: red; ">×</span> |
-| qemu（qemu-system-x86_64）コマンドで、仮想ディスクイメージファイルを最初のハードディスクとして指定するオプションは？ | `-hda` | ○ |
-| qemu（qemu-system-x86_64）コマンドで、ISOイメージを仮想マシンにCD-ROMとして指定するオプションは？ | `-cdrom` | ○ |
-| qemu（qemu-system-x86_64）コマンドで、ブートデバイスを指定するオプションは？ | `-boot` | ○ |
-| qemu（qemu-system-x86_64）コマンドで、Linuxを直接起動する際にLinuxカーネルのパラメータを指定するオプションは？ | `-append` | <span style="color: red; ">×</span> |
-| qemu（qemu-system-x86_64）コマンドで、ハードウェア拡張機能を有効化するオプションは？ | `-accel` | <span style="color: red; ">×</span> |
-| qemu（qemu-system-x86_64）コマンドで、仮想USBマウスをエミュレートするオプションは？  | `-usbdevice mouse` | ○ |
-| qemu（qemu-system-x86_64）コマンドで、VNCを画面出力として使用する場合にマウスポインタの絶対位置を特定するオプションは？ | `-usbdevice tablet` | ○ |
-| qemu（qemu-system-x86_64）コマンドで、QEMUモニタに標準入出力を使うよう指定するオプションは？ | `-monitor stdio` | <span style="color: red; ">×</span> |
-| qemu（qemu-system-x86_64）コマンドで、仮想マシン名を指定するオプションは？ | `-name` | ○ |
-| qemu（qemu-system-x86_64）コマンドで、指定したファイルから仮想マシンの設定を読み込むオプションは？ | `-readconfig` | ○ |
-| qemu（qemu-system-x86_64）コマンドで、仮想マシンの設定をファイルに出力するオプションは？| `-writeconfig` | <span style="color: red; ">×</span> |
-| qemu（qemu-system-x86_64）コマンドで、以下と同じ意味を持つオプションの指定は？ <br> ```-drive file=vm1.img,if=ide,index=0,media=disk``` | `-hda vm1.img` | <span style="color: red; ">×</span> |
-| qemu（qemu-system-x86_64）コマンドで、カーネルを指定して直接仮想マシンを起動する場合に指定するオプションは？カーネルイメージ、初期RAMディスク、ルートファイルシステム の順に答えよ <br> ```qemu-system-x86_64 -hda vm1.img \``` <br> ```　　　______ /boot/bzImage \``` <br> ```　　　______ /boot/initramfs.img \``` <br> ```　　　______ "root=/dev/hda"``` <br> | `-kernel` <br> `-initrd` <br> `-append` | ○ <br> <span style="color: red; ">×</span> <br> <span style="color: red; ">×</span> |
+| 問題 | 回答 | 復習１ | 復習２ |
+| ---- | ---- | :----: | :----: |
+| QEMUでゲストOSのインストールや起動・設定など各種操作を行うコマンドユーティリティは？なお、アーキテクチャはx86_64向けのものとする | `qemu-system-x86_64` | ○ | ○ |
+| qemu（qemu-system-x86_64）コマンドで、仮想マシンに対して指定した数のCPUを持つSMPシステムとしてエミュレートするオプションは？ | `-smp` | ○ | ○ |
+| qemu（qemu-system-x86_64）コマンドで、仮想マシンのメモリサイズを指定するオプションは？ | `-m` | <span style="color: red; ">×</span> | ○ |
+| qemu（qemu-system-x86_64）コマンドで、ユーザーモードネットワークを使用するよう指定するオプションは？ | `-net user` | ○ | ○ |
+| qemu（qemu-system-x86_64）コマンドで、VLANに接続するNICを作成するオプションは？ | `-net nic` | <span style="color: red; ">×</span> | <span style="color: red; ">×</span> |
+| qemu（qemu-system-x86_64）コマンドで、TUN/TAPデバイスを使用してゲストOSとホストOSを仮想ネットワークで接続するオプションは？ | `-net tap` | <span style="color: red; ">×</span> | ○ |
+| qemu（qemu-system-x86_64）コマンドで、仮想ディスクイメージファイルを最初のハードディスクとして指定するオプションは？ | `-hda` | ○ | ○ |
+| qemu（qemu-system-x86_64）コマンドで、ISOイメージを仮想マシンにCD-ROMとして指定するオプションは？ | `-cdrom` | ○ | ○ |
+| qemu（qemu-system-x86_64）コマンドで、ブートデバイスを指定するオプションは？ | `-boot` | ○ | ○ |
+| qemu（qemu-system-x86_64）コマンドで、Linuxを直接起動する際にLinuxカーネルのパラメータを指定するオプションは？ | `-append` | <span style="color: red; ">×</span> | ○ |
+| qemu（qemu-system-x86_64）コマンドで、ハードウェア拡張機能を有効化するオプションは？ | `-accel` | <span style="color: red; ">×</span> | ○ |
+| qemu（qemu-system-x86_64）コマンドで、仮想USBマウスをエミュレートするオプションは？  | `-usbdevice mouse` | ○ | ○ |
+| qemu（qemu-system-x86_64）コマンドで、VNCを画面出力として使用する場合にマウスポインタの絶対位置を特定するオプションは？ | `-usbdevice tablet` | ○ | ○ |
+| qemu（qemu-system-x86_64）コマンドで、QEMUモニタに標準入出力を使うよう指定するオプションは？ | `-monitor stdio` | <span style="color: red; ">×</span> | ○ |
+| qemu（qemu-system-x86_64）コマンドで、仮想マシン名を指定するオプションは？ | `-name` | ○ | ○ |
+| qemu（qemu-system-x86_64）コマンドで、指定したファイルから仮想マシンの設定を読み込むオプションは？ | `-readconfig` | ○ | ○ |
+| qemu（qemu-system-x86_64）コマンドで、仮想マシンの設定をファイルに出力するオプションは？| `-writeconfig` | <span style="color: red; ">×</span> | ○ |
+| qemu（qemu-system-x86_64）コマンドで、以下と同じ意味を持つオプションの指定は？ <br> ```-drive file=vm1.img,if=ide,index=0,media=disk``` | `-hda vm1.img` | <span style="color: red; ">×</span> | ○ |
+| qemu（qemu-system-x86_64）コマンドで、カーネルを指定して直接仮想マシンを起動する場合に指定するオプションは？カーネルイメージ、初期RAMディスク、ルートファイルシステム の順に答えよ <br> ```qemu-system-x86_64 -hda vm1.img \``` <br> ```　　　______ /boot/bzImage \``` <br> ```　　　______ /boot/initramfs.img \``` <br> ```　　　______ "root=/dev/hda"``` <br> | `-kernel` <br> `-initrd` <br> `-append` | ○ <br> <span style="color: red; ">×</span> <br> <span style="color: red; ">×</span> | ○ <br> <span style="color: red; ">×</span> <br> ○ |
 
 [戻る](../README.md#full-virtualization主題351)
 

@@ -33,30 +33,30 @@
 
 ## LXC
 
-| 問題 | 回答 | 復習１ |
-| ---- | ---- | :----: |
-| LinuxContainers.orgによって開発され、Linuxカーネルの名前空間を利用して実現されるコンテナ型の仮想化ソフトウェアは？（略語で） | LXC | ○ |
-| LXCコンテナ「hoge」のログファイル名は？（フルパス） | /var/log/lxc/hoge.log | <span style="color: red; ">×</span> |
-| LXCにおいて、コンテナ作成時に各コンテナのデフォルトの設定として反映されるファイル名を答えよ（フルパス） | /etc/lxc/default.conf | <span style="color: red; ">×</span> |
-| LXCコンテナの設定やrootファイルシステムなどが保存されているディレクトリは？（フルパス） | /var/lib/lxc/ | <span style="color: red; ">×</span> |
-| LXCにおいて、コンテナを作成するコマンドは？ | `lxc-create` | ○ |
-| LXCにおいて、コンテナを起動するコマンドは？ | `lxc-start` | <span style="color: red; ">×</span> |
-| LXCにおいて、コンテナを停止するコマンドは？ | `lxc-stop` | ○ |
-| LXCにおいて、コンテナを廃棄するコマンドは？ | `lxc-destroy` | ○ |
-| LXCにおいて、コンテナにログインすることなく指定したコマンドを実行するコマンドは？ | `lxc-attach` | ○ |
-| LXCにおいて、コンテナにコンソール接続するコマンドは？ | `lxc-console` | ○ |
-| LXCにおいて、コンテナ内で動作しているプロセスを一時的に停止し、新たなプロセスを動作させないようにするコマンドは？ | `lxc-freeze` | <span style="color: red; ">×</span> |
-| LXCにおいて、一時停止していたコンテナを再稼働するコマンドは？ | `lxc-unfreeze` | <span style="color: red; ">×</span> |
-| LXCにおいて、コンテナの一覧を表示するコマンドは？ | `lxc-ls` | <span style="color: red; ">×</span> |
-| LXCにおいて、各コンテナを指定してコンテナ情報を表示するコマンドは？ | `lxc-info` | ○ |
-| LXCにおいて、LXCコンテナのリソースの情報を表示したり設定することができるコマンドは？ | `lxc-cgroup` | <span style="color: red; ">×</span> |
-| LXCにおいて、LXCコンテナの稼働状況を、メモリの使用状況やCPU使用率、ディスクI/Oなどの条件でソートして出力するコマンドは？ | `lxc-top` | ○ |
-| LXCにおいて、LXCコンテナの状態を保存したり、保存したコンテナをリストアするコマンドは？ | `lxc-checkpoint` | ○ |
-| LXCにおいて、コンテナ「con」でシェルを起動するコマンドを答えよ | ```lxc-attach -n con``` | <span style="color: red; ">×</span> |
-| LXCを基盤に、より高度なコンテナ管理システムとして作成されたソフトウェアは？（略語で） | LXD | ○ |
-| LXDにおいて、LXDが作成する仮想ブリッジ「lxdbr0」を経由して、ホストとコンテナ間およびコンテナ同士の通信が可能なネットワークタイプは？ | bridged | <span style="color: red; ">×</span> |
-| LXDにおいて、コンテナに独自のMACアドレスを持たせ、物理NICを仮想的に分割することで物理ネットワークへの直接的な接続が可能なネットワークタイプは？ | macvlan | ○ |
-| LXDにおいて、ホストの物理NICをコンテナに割り当てるネットワークタイプは？ | physical | ○ |
+| 問題 | 回答 | 復習１ | 復習２ |
+| ---- | ---- | :----: | :----: |
+| LinuxContainers.orgによって開発され、Linuxカーネルの名前空間を利用して実現されるコンテナ型の仮想化ソフトウェアは？（略語で） | LXC | ○ | ○ |
+| LXCコンテナ「hoge」のログファイル名は？（フルパス） | /var/log/lxc/hoge.log | <span style="color: red; ">×</span> | ○ |
+| LXCにおいて、コンテナ作成時に各コンテナのデフォルトの設定として反映されるファイル名を答えよ（フルパス） | /etc/lxc/default.conf | <span style="color: red; ">×</span> | ○ |
+| LXCコンテナの設定やrootファイルシステムなどが保存されているディレクトリは？（フルパス） | /var/lib/lxc/ | <span style="color: red; ">×</span> | ○ |
+| LXCにおいて、コンテナを作成するコマンドは？ | `lxc-create` | ○ | ○ |
+| LXCにおいて、コンテナを起動するコマンドは？ | `lxc-start` | <span style="color: red; ">×</span> | ○ |
+| LXCにおいて、コンテナを停止するコマンドは？ | `lxc-stop` | ○ | ○ |
+| LXCにおいて、コンテナを廃棄するコマンドは？ | `lxc-destroy` | ○ | ○ |
+| LXCにおいて、コンテナにログインすることなく指定したコマンドを実行するコマンドは？ | `lxc-attach` | ○ | ○ |
+| LXCにおいて、コンテナにコンソール接続するコマンドは？ | `lxc-console` | ○ | ○ |
+| LXCにおいて、コンテナ内で動作しているプロセスを一時的に停止し、新たなプロセスを動作させないようにするコマンドは？ | `lxc-freeze` | <span style="color: red; ">×</span> | <span style="color: red; ">×</span> |
+| LXCにおいて、一時停止していたコンテナを再稼働するコマンドは？ | `lxc-unfreeze` | <span style="color: red; ">×</span> | <span style="color: red; ">×</span> |
+| LXCにおいて、コンテナの一覧を表示するコマンドは？ | `lxc-ls` | <span style="color: red; ">×</span> | <span style="color: red; ">×</span> |
+| LXCにおいて、各コンテナを指定してコンテナ情報を表示するコマンドは？ | `lxc-info` | ○ | ○ |
+| LXCにおいて、LXCコンテナのリソースの情報を表示したり設定することができるコマンドは？ | `lxc-cgroup` | <span style="color: red; ">×</span> | ○ |
+| LXCにおいて、LXCコンテナの稼働状況を、メモリの使用状況やCPU使用率、ディスクI/Oなどの条件でソートして出力するコマンドは？ | `lxc-top` | ○ | ○ |
+| LXCにおいて、LXCコンテナの状態を保存したり、保存したコンテナをリストアするコマンドは？ | `lxc-checkpoint` | ○ | ○ |
+| LXCにおいて、コンテナ「con」でシェルを起動するコマンドを答えよ | ```lxc-attach -n con``` | <span style="color: red; ">×</span> | <span style="color: red; ">×</span> |
+| LXCを基盤に、より高度なコンテナ管理システムとして作成されたソフトウェアは？（略語で） | LXD | ○ | ○ |
+| LXDにおいて、LXDが作成する仮想ブリッジ「lxdbr0」を経由して、ホストとコンテナ間およびコンテナ同士の通信が可能なネットワークタイプは？ | bridged | <span style="color: red; ">×</span> | ○ |
+| LXDにおいて、コンテナに独自のMACアドレスを持たせ、物理NICを仮想的に分割することで物理ネットワークへの直接的な接続が可能なネットワークタイプは？ | macvlan | ○ | ○ |
+| LXDにおいて、ホストの物理NICをコンテナに割り当てるネットワークタイプは？ | physical | ○ | ○ |
 
 [戻る](../README.md#コンテナ仮想化主題352)
 

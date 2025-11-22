@@ -2,14 +2,14 @@
 
 ## クラウド管理ツール
 
-| 問題 | 回答 | 復習１ |
-| ---- | ---- | :----: |
-| AWSクラウドサービス（EC2、S3、IAMなど）と高い互換性を持つオープンソースのクラウド管理ソフトウェアは？（略語で） | Eucalyptus | <span style="color: red; ">×</span> |
-| Xen、KVM、VMwareなど主要な仮想化ソフトウェアに対応した、仮想データセンタ管理向けの軽量なクラウドソフトウェアは？| OpenNebula | <span style="color: red; ">×</span> |
-| XenServer、KVM、VMware vSphereなど複数のハイパーバイザに対応しており、マネジメントサーバと呼ばれる管理サーバと、ポッド、ゾーンなど階層構造で管理されるリソースで構成されるクラウド管理プラットフォームは？ | CloudStack | ○ |
-| NASAのコンピューティングサービスとRackspace社のストレージサービスを組み合わせて共同開発されたクラウド基盤ソフトウェアは？ | OpenStack | ○ |
-| OpenStackのコンポーネントについて、それぞれの説明に適したものを答えよ <br>・VM（仮想マシン）の管理 <br>・ブロックストレージ（ボリューム）管理 <br>・仮想ネットワーク管理 | Nova <br> Cinder <br> Neutron | ○ <br> ○ <br> ○ |
-| OpenStackのコンポーネントについて、それぞれの説明に適したものを答えよ <br>・統合認証基盤 <br>・オブジェクトストレージ管理 <br>・WebGUI管理 <br>・仮想マシンイメージ管理 | Keystone <br> Swift <br> Horizon <br> Glance | ○ <br> <span style="color: red; ">×</span> <br> ○ <br> <span style="color: red; ">×</span> |
+| 問題 | 回答 | 復習１ | 復習２ |
+| ---- | ---- | :----: | :----: |
+| AWSクラウドサービス（EC2、S3、IAMなど）と高い互換性を持つオープンソースのクラウド管理ソフトウェアは？（略語で） | Eucalyptus | <span style="color: red; ">×</span> | <span style="color: red; ">×</span> |
+| Xen、KVM、VMwareなど主要な仮想化ソフトウェアに対応した、仮想データセンタ管理向けの軽量なクラウドソフトウェアは？| OpenNebula | <span style="color: red; ">×</span> | <span style="color: red; ">×</span> |
+| XenServer、KVM、VMware vSphereなど複数のハイパーバイザに対応しており、マネジメントサーバと呼ばれる管理サーバと、ポッド、ゾーンなど階層構造で管理されるリソースで構成されるクラウド管理プラットフォームは？ | CloudStack | ○ | ○ |
+| NASAのコンピューティングサービスとRackspace社のストレージサービスを組み合わせて共同開発されたクラウド基盤ソフトウェアは？ | OpenStack | ○ | ○ |
+| OpenStackのコンポーネントについて、それぞれの説明に適したものを答えよ <br>・VM（仮想マシン）の管理 <br>・ブロックストレージ（ボリューム）管理 <br>・仮想ネットワーク管理 | Nova <br> Cinder <br> Neutron | ○ <br> ○ <br> ○ | ○ <br> ○ <br> ○ |
+| OpenStackのコンポーネントについて、それぞれの説明に適したものを答えよ <br>・統合認証基盤 <br>・オブジェクトストレージ管理 <br>・WebGUI管理 <br>・仮想マシンイメージ管理 | Keystone <br> Swift <br> Horizon <br> Glance | ○ <br> <span style="color: red; ">×</span> <br> ○ <br> <span style="color: red; ">×</span> | ○ <br> ○ <br> ○ <br> ○ <br> |
 
 [戻る](../README.md#vmのデプロイとプロビジョニング主題353)
 

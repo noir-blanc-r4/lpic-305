@@ -221,39 +221,39 @@
 
 ## 仮想マシンのディスクイメージの管理
 
-| 問題 | 回答 | 復習１ |
-| ---- | ---- | :----: |
-| qemu-imgコマンドにおいて、仮想マシン用のディスクイメージを作成するサブコマンドは？ | `create` | <span style="color: red; ">×</span> |
-| qemu-imgコマンドにおいて、仮想ディスクイメージのファイル形式を変換するサブコマンドは？  | `convert` | ○ |
-| qemu-imgコマンドにおいて、仮想ディスクイメージファイルのサイズを変更するサブコマンドは？ | `resize` | ○ |
-| qemu-imgコマンドにおいて、仮想ディスクイメージファイルの情報を表示するサブコマンドは？ | `info` | ○ |
-| 以下の条件で仮想ディスクイメージを作成するとき、下線部に当てはまるものを答えよ <br>・ファイル形式：qcow2 <br>・ファイル名：centos.img <br>・サイズ：8GB <br> ```qemu-img create ____ qcow2 centos.img 8G``` | `-f` | ○ |
-| qemu-imgコマンドを用いて、仮想マシンのスナップショット一覧を表示するコマンドラインを答えよ | ```qemu-img snapshot -l``` | <span style="color: red; ">×</span> |
-| 仮想マシンのディスクイメージを、ホストシステムへマウントして操作することができるオープンソースのライブラリ名は？| libguestfs | ○ |
-| libguestfsライブラリを用いて、仮想マシンのディスクイメージ上のファイルへアクセスしたり編集することができるツールは？ | guestfish | <span style="color: red; ">×</span> |
-| libguestfsのツールで、仮想マシンのディスクイメージをマウントするコマンドとアンマウントするコマンドをそれぞれ答えよ| **マウント:** `guestmount` <br>**アンマウント:** `guestunmount` | ○ <br> ○ |
-| libguestfsのツールで、仮想マシンのディスクイメージ内のファイルを編集するコマンドは？ | `virt-edit` | <span style="color: red; ">×</span> |
-| libguestfsのツールで、仮想マシンのディスクイメージ内のファイルの内容を表示するコマンドは？ | `virt-cat` | <span style="color: red; ">×</span> |
-| libguestfsのツールで、仮想マシンのディスクイメージ内のファイルシステムとパーティションを表示するコマンドは？ | `virt-filesystems` | <span style="color: red; ">×</span> |
-| libguestfsのツールで、仮想マシンのディスクイメージにインストールされたOSやアプリケーション等の情報を取得するコマンドは？ | `virt-inspector` | <span style="color: red; ">×</span> |
-| libguestfsのツールで、仮想マシンのディスクイメージ上にある「/home/guest」ディレクトリを、ホストマシンのディレクトリへコピーしたいとき、用いるコマンドは？ | `virt-copy-out` | ○ |
-| libguestfsのツールで、ホストマシンからディスクイメージへファイルやディレクトリをコピーするコマンドは？| `virt-copy-in` | ○ |
-| libguestfsのツールで、仮想マシンのディスクイメージの容量を変更するコマンドは？ | `virt-resize` | <span style="color: red; ">×</span> |
-| libguestfsのツールで、仮想マシンのディスクイメージから機密情報を削除するコマンドは？ | `virt-sysprep` | ○ |
-| libguestfsのツールで、ディスクイメージの未使用領域を削除（圧縮）し、別のファイルとして出力するコマンドは？ | `virt-sparsify` | <span style="color: red; ">×</span> |
-| libguestfsのツールで、ゲストOSが起動しないときに救助用のシェルを提供するコマンドは？ | `virt-rescue` | <span style="color: red; ">×</span> |
-| libguestfsのツールで、VMwareやXenなどのハイパーバイザー上で動作する仮想マシンを、KVM、RHEV、またはoVirt互換の環境で動作可能な形式に変換するコマンドは？ | `virt-v2v` | <span style="color: red; ">×</span> |
-| libguestfsのツールで、物理マシンを仮想マシンのディスクイメージへ変換するコマンドは？| `virt-p2v` | <span style="color: red; ">×</span> |
-| libguestfsのツールで、物理マシンを仮想マシンに変換するためのブータブルディスクまたはUSBイメージを作成するコマンドは？ | `virt-p2v-make-disk` | <span style="color: red; ">×</span> |
-| libguestfsのツールで、2つのディスクイメージ「old.qcow2」と「new.qcow2」の差分を表示するコマンドは？ 下線部を答えよ <br> ```_________ -a old.qcow2 -A new.qcow2``` | `virt-diff` | <span style="color: red; ">×</span> |
-| libguestfsのツールで、仮想マシンのディスクイメージ「img.qcow2」のファイルシステム「/dev/hoge/root」を、ホストマシンの「/mnt」へマウントしたいとき、下線部に当てはまるものを答えよ <br> ```guestmount -a ________ -m ______ ________``` | `img.qcow2` <br> `/dev/hoge/root` <br> `/mnt` | <span style="color: red; ">×</span> <br> <span style="color: red; ">×</span> <br> <span style="color: red; ">×</span> |
-| libguestfsのツールを用いて、仮想マシン「hoge」のディスク使用量を参照するコマンドを答えよ | ```virt-df -d hoge``` | <span style="color: red; ">×</span> |
-| libguestfsのツールを用いて、仮想マシンのディスクイメージ「hoge.img」のディスク使用量を参照するコマンドを答えよ | ```virt-df -a hoge.img``` | <span style="color: red; ">×</span> |
-| 仮想マシン「demo」をテスト環境用のテンプレートとして使用するため仮想マシンに保存されたユーザアカウントやSSHのキーなどの情報を削除したい。適切なコマンドラインを答えよ | ```virt-sysprep -d demo``` | <span style="color: red; ">×</span> |
-| 仮想マシンのディスクイメージのファイル形式で、以下の特徴を持つものは？（略語で） <br>・QEMUがサポートする形式である <br>・ファイル内にメタデータを持ち、スナップショットを取得できる  | qcow2 | ○ |
-| 仮想マシンのディスクイメージのファイル形式で、以下の特徴を持つものは？（略語で） <br>・QEMUがサポートする形式である・単純なデータ列で構成され、実体はスパースファイル <br>・スナップショットの取得に対応していない | raw | ○ |
-| 仮想マシンのディスクイメージのファイル形式で、VMwareによって開発され、VMware製品で広く使用されるものは？（略語で） | VMDK | <span style="color: red; ">×</span> |
-| 仮想マシンのディスクイメージのファイル形式で、Microsoftによって開発され、主にHyper-VやVirtual PCで使用されるものは？（略語で） | VHD | <span style="color: red; ">×</span> |
-| 仮想マシンのディスクイメージのファイル形式で、仮想マシンを異なるハイパーバイザー間で移行したり、仮想マシンを配布するために使用されるものは？（略語で） | OVF | <span style="color: red; ">×</span> |
+| 問題 | 回答 | 復習１ | 復習２ |
+| ---- | ---- | :----: | :----: |
+| 仮想マシンのディスクイメージのファイル形式で、以下の特徴を持つものは？（略語で） <br>・QEMUがサポートする形式である <br>・ファイル内にメタデータを持ち、スナップショットを取得できる  | qcow2 | ○ | ○ |
+| 仮想マシンのディスクイメージのファイル形式で、以下の特徴を持つものは？（略語で） <br>・QEMUがサポートする形式である・単純なデータ列で構成され、実体はスパースファイル <br>・スナップショットの取得に対応していない | raw | ○ | ○ |
+| 仮想マシンのディスクイメージのファイル形式で、VMwareによって開発され、VMware製品で広く使用されるものは？（略語で） | VMDK | <span style="color: red; ">×</span> | <span style="color: red; ">×</span> |
+| 仮想マシンのディスクイメージのファイル形式で、Microsoftによって開発され、主にHyper-VやVirtual PCで使用されるものは？（略語で） | VHD | <span style="color: red; ">×</span> | ○ |
+| 仮想マシンのディスクイメージのファイル形式で、仮想マシンを異なるハイパーバイザー間で移行したり、仮想マシンを配布するために使用されるものは？（略語で） | OVF | <span style="color: red; ">×</span> | <span style="color: red; ">×</span> |
+| qemu-imgコマンドにおいて、仮想マシン用のディスクイメージを作成するサブコマンドは？ | `create` | <span style="color: red; ">×</span> | ○ |
+| qemu-imgコマンドにおいて、仮想ディスクイメージのファイル形式を変換するサブコマンドは？  | `convert` | ○ | <span style="color: red; ">×</span> |
+| qemu-imgコマンドにおいて、仮想ディスクイメージファイルのサイズを変更するサブコマンドは？ | `resize` | ○ | ○ |
+| qemu-imgコマンドにおいて、仮想ディスクイメージファイルの情報を表示するサブコマンドは？ | `info` | ○ | <span style="color: red; ">×</span> |
+| 以下の条件で仮想ディスクイメージを作成するとき、下線部に当てはまるものを答えよ <br>・ファイル形式：qcow2 <br>・ファイル名：centos.img <br>・サイズ：8GB <br> ```qemu-img create ____ qcow2 centos.img 8G``` | `-f` | ○ | ○ |
+| qemu-imgコマンドを用いて、仮想マシンのスナップショット一覧を表示するコマンドラインを答えよ | ```qemu-img snapshot -l``` | <span style="color: red; ">×</span> | <span style="color: red; ">×</span> |
+| 仮想マシンのディスクイメージを、ホストシステムへマウントして操作することができるオープンソースのライブラリ名は？| libguestfs | ○ | ○ |
+| libguestfsライブラリを用いて、仮想マシンのディスクイメージ上のファイルへアクセスしたり編集することができるツールは？ | guestfish | <span style="color: red; ">×</span> | ○ |
+| libguestfsのツールで、仮想マシンのディスクイメージをマウントするコマンドとアンマウントするコマンドをそれぞれ答えよ| **マウント:** `guestmount` <br>**アンマウント:** `guestunmount` | ○ <br> ○ | ○ <br> ○ |
+| libguestfsのツールで、仮想マシンのディスクイメージ内のファイルを編集するコマンドは？ | `virt-edit` | <span style="color: red; ">×</span> | ○ |
+| libguestfsのツールで、仮想マシンのディスクイメージ内のファイルの内容を表示するコマンドは？ | `virt-cat` | <span style="color: red; ">×</span> | <span style="color: red; ">×</span> |
+| libguestfsのツールで、仮想マシンのディスクイメージ内のファイルシステムとパーティションを表示するコマンドは？ | `virt-filesystems` | <span style="color: red; ">×</span> | ○ |
+| libguestfsのツールで、仮想マシンのディスクイメージにインストールされたOSやアプリケーション等の情報を取得するコマンドは？ | `virt-inspector` | <span style="color: red; ">×</span> | <span style="color: red; ">×</span> |
+| libguestfsのツールで、仮想マシンのディスクイメージ上にある「/home/guest」ディレクトリを、ホストマシンのディレクトリへコピーしたいとき、用いるコマンドは？ | `virt-copy-out` | ○ | <span style="color: red; ">×</span> |
+| libguestfsのツールで、ホストマシンからディスクイメージへファイルやディレクトリをコピーするコマンドは？| `virt-copy-in` | ○ | ○ |
+| libguestfsのツールで、仮想マシンのディスクイメージの容量を変更するコマンドは？ | `virt-resize` | <span style="color: red; ">×</span> | <span style="color: red; ">×</span> |
+| libguestfsのツールで、仮想マシンのディスクイメージから機密情報を削除するコマンドは？ | `virt-sysprep` | ○ | ○ |
+| libguestfsのツールで、ディスクイメージの未使用領域を削除（圧縮）し、別のファイルとして出力するコマンドは？ | `virt-sparsify` | <span style="color: red; ">×</span> | ○ |
+| libguestfsのツールで、ゲストOSが起動しないときに救助用のシェルを提供するコマンドは？ | `virt-rescue` | <span style="color: red; ">×</span> | ○ |
+| libguestfsのツールで、VMwareやXenなどのハイパーバイザー上で動作する仮想マシンを、KVM、RHEV、またはoVirt互換の環境で動作可能な形式に変換するコマンドは？ | `virt-v2v` | <span style="color: red; ">×</span> | ○ |
+| libguestfsのツールで、物理マシンを仮想マシンのディスクイメージへ変換するコマンドは？| `virt-p2v` | <span style="color: red; ">×</span> | ○ |
+| libguestfsのツールで、物理マシンを仮想マシンに変換するためのブータブルディスクまたはUSBイメージを作成するコマンドは？ | `virt-p2v-make-disk` | <span style="color: red; ">×</span> | ○ |
+| libguestfsのツールで、2つのディスクイメージ「old.qcow2」と「new.qcow2」の差分を表示するコマンドは？ 下線部を答えよ <br> ```_________ -a old.qcow2 -A new.qcow2``` | `virt-diff` | <span style="color: red; ">×</span> | ○ |
+| libguestfsのツールで、仮想マシンのディスクイメージ「img.qcow2」のファイルシステム「/dev/hoge/root」を、ホストマシンの「/mnt」へマウントしたいとき、下線部に当てはまるものを答えよ <br> ```guestmount -a ________ -m ______ ________``` | `img.qcow2` <br> `/dev/hoge/root` <br> `/mnt` | <span style="color: red; ">×</span> <br> <span style="color: red; ">×</span> <br> <span style="color: red; ">×</span> | ○ <br> ○ <br> ○ |
+| libguestfsのツールを用いて、仮想マシン「hoge」のディスク使用量を参照するコマンドを答えよ | ```virt-df -d hoge``` | <span style="color: red; ">×</span> | <span style="color: red; ">×</span> |
+| libguestfsのツールを用いて、仮想マシンのディスクイメージ「hoge.img」のディスク使用量を参照するコマンドを答えよ | ```virt-df -a hoge.img``` | <span style="color: red; ">×</span> | ○ |
+| 仮想マシン「demo」をテスト環境用のテンプレートとして使用するため仮想マシンに保存されたユーザアカウントやSSHのキーなどの情報を削除したい。適切なコマンドラインを答えよ | ```virt-sysprep -d demo``` | <span style="color: red; ">×</span> | ○ |
 
 [戻る](../README.md#full-virtualization主題351)

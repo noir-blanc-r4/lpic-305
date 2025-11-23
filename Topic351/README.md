@@ -139,6 +139,12 @@ AMD: **RVI (Rapid Virtualization Indexing)**
 **TUN/TAP関連**
 - TAPインタフェース「tap」を作成： ```tunctl -p -t tap0``` <br>※TAP追加でも **`tunctl` (TUN)** であるところがポイント
 
+**KVMのカーネルモジュール名**
+- Intel VT： kvm_intel (**kvm-intel.ko**)
+- AMD-V： kvm_amd.ko (**kvm-amd.ko**)
+<br> ※コマ問の回答は誤りで、ファイル名（拡張子 **.ko** 付き）の場合は **kvm-intel.ko**, **kvm-amd.ko** と **`-`** でつなぐのが正しい
+<br>　モジュール名（**.ko** 無し）の場合は kvm_intel, kvm_amd と **`_`** でつなぐということらしい
+
 **スナップショット関連**
 - QEMUモニタで *稼働中の仮想マシンのスナップショット作成** のコマンド： `savevm`
 - QEMUモニタで *スナップショットから復元** のコマンド： `loadvm`
